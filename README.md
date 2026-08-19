@@ -1,4 +1,4 @@
-# Fluid Power Systems Engineering — Curriculum
+# Fluid Power Systems Engineering — Mech & Hyd Sys
 
 A hands-on fluid power course built around **one real machine**: a precision hydraulic lift platform that raises a two-tonne load to a commanded height and holds it to within ±1 mm. Every lesson settles one real engineering decision about that platform.
 

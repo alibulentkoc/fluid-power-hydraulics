@@ -2,7 +2,7 @@ site_name: Fluid Power Systems Engineering - Mech and Hyd Sys
 site_description: A hands-on fluid power course built around one real machine — a precision hydraulic lift platform.
 site_author: Ali Bulent Koc
 # Update site_url to match the GitHub Pages target before deploying:
-site_url: https://alibulentkoc.github.io/fluid-power-curriculum/
+site_url: https://alibulentkoc.github.io/fluid-power-hydraulics/
 
 # Authored relative links (assets/, demos/, quizzes/) resolve correctly with flat URLs.
 use_directory_urls: false

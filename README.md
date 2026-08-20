@@ -9,45 +9,43 @@ The learner-facing site is built with **MkDocs Material**. This repository also 
 ## Repository layout
 
 ```
-docs/                  The deployable learner site (MkDocs)
-  index.md             Course home
-  course-machine.md    The machine every lesson builds
-  assets/              Course-machine figure
-  javascripts/         MathJax config (pymdownx.arithmatex generic)
-  module01/            Introduction — 4 lessons (complete)
-  module02/            Components — 2 of 4 lessons
-  module05_draft/      Power-units draft lesson (not in site nav)
-    <lesson>.md        Twelve-part lesson
-    assets/*.svg       Reviewed figures
-    demos/*.html       Standalone interactive demonstrations
-    quizzes/*.html     Auto-graded knowledge checks
+docs/                     The deployable learner site (MkDocs)
+  index.md                Course home
+  course-machine.md       The machine every lesson builds
+  assets/                 Course-machine figure
+  javascripts/            MathJax config (pymdownx.arithmatex generic)
+  module01/ … module11/   11 modules, 52 lessons (complete)
+    NN_<lesson>.md        Twelve-part lesson
+    assets/*.svg          Reviewed figures
+    demos/*.html          Standalone interactive demonstrations
+    quizzes/*.html        Auto-graded knowledge checks
 
-standards/             Production directives the lessons must satisfy
+standards/                Production directives the lessons must satisfy
   GLOBAL_CURRICULUM_PRODUCTION_STANDARD.md
   VISUAL_STANDARD_v1.md
-  COURSE_MACHINE.md    Continuity spine (the machine + 12-module thread)
+  COURSE_MACHINE.md       Continuity spine (the machine + module thread)
 
-framework/             Curriculum governance (competency, assessment,
-                       certification, credit, learner journey, phase reports)
+framework/                Curriculum governance (competency, assessment,
+                          certification, credit, learner journey, phase reports)
 
-architecture/          Trainer-integration + engine design specs
-                       (canonical parameters, stage specs, units boundary)
+architecture/             Trainer-integration + engine design specs
+                          (canonical parameters, stage specs, units boundary)
 
-trainer-integration/   Patches to apply to the separate Trainer repo
-                       (the Trainer itself is NOT modified here)
+trainer-integration/      Patches to apply to the separate Trainer repo
+                          (the Trainer itself is NOT modified here)
 
-tools/                 Build + verification pipeline
-  build-preview.py     Assemble a self-contained review preview
-  prerender-math.mjs   LaTeX -> plain inline SVG (no client MathJax)
-  clean-preview.py     Strip CDN/mermaid, fix nesting
-  rasterize-embed.py   Figure + formulas -> PNG <img> data-URIs
-  gates/gate-*.mjs     Per-lesson Definition-of-Done gates
+tools/                    Build + verification pipeline
+  build-preview.py        Assemble a self-contained review preview
+  prerender-math.mjs      LaTeX -> plain inline SVG (no client MathJax)
+  clean-preview.py        Strip CDN/mermaid, fix nesting
+  rasterize-embed.py      Figure + formulas -> PNG <img> data-URIs
+  gates/gate-*.mjs        Per-lesson Definition-of-Done gates
 
-previews/              Self-contained single-file review artifacts
-                       (figure + formulas embedded as PNG; for offline review)
+previews/                 Self-contained single-file review artifacts
+                          (figure + formulas embedded as PNG; for offline review)
 
 governance/
-  master_progress.md   The decision ledger (D1..D37)
+  master_progress.md      The decision ledger
 ```
 
 ---
@@ -86,16 +84,27 @@ cd tools && npm i jsdom     # one-time
 node gates/gate-m2l1.mjs
 ```
 
+The whole site also passes `mkdocs build --strict` (no broken links or missing files), and every lesson's coding-exercise runs clean.
+
 ---
 
 ## Status
 
+**Complete — all 11 modules, 52 lessons.** Each lesson carries a reviewed figure, an interactive demo, and an auto-graded quiz.
+
 | Module | Title | Status |
 |--------|-------|--------|
 | 01 | Introduction to Fluid Power | ✅ Complete (4 lessons) |
-| 02 | Fluid Power Components | 🟡 2 of 4 lessons (cylinder, power unit) |
-| 05 | Power Units | 🟡 1 draft lesson (`module05_draft`, not in nav) |
-| 03–04, 06–12 | — | ⬜ Planned |
+| 02 | Fluid Power Components | ✅ Complete (4 lessons) |
+| 03 | Fluid Fundamentals | ✅ Complete (4 lessons) |
+| 04 | Actuators | ✅ Complete (5 lessons) |
+| 05 | Power Units | ✅ Complete (5 lessons) |
+| 06 | Valves & Control | ✅ Complete (5 lessons) |
+| 07 | Circuits | ✅ Complete (5 lessons) |
+| 08 | Electrohydraulic Control | ✅ Complete (5 lessons) |
+| 09 | Modeling & Simulation | ✅ Complete (5 lessons) |
+| 10 | Control Systems | ✅ Complete (5 lessons) |
+| 11 | The Live Digital Model | ✅ Complete (5 lessons) |
 
 The Trainer platform (`github.com/alibulentkoc/hydraulic-trainer-platform`) is a separate repository; its architecture and contracts are unchanged. Anything under `trainer-integration/` is a patch to apply there deliberately, not an in-place modification.
 
@@ -103,4 +112,4 @@ The Trainer platform (`github.com/alibulentkoc/hydraulic-trainer-platform`) is a
 
 ## License
 
-Add a license of your choosing (e.g. CC BY 4.0 for the curriculum content, MIT for the tooling) before publishing.
+The curriculum content is licensed under **CC BY 4.0** — see the [`LICENSE`](LICENSE) file. If you use or adapt this course, please cite it via [`CITATION.cff`](CITATION.cff).

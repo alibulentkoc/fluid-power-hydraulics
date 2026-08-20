@@ -98,10 +98,13 @@ def step(Kp, target=5.0, T=4.0):
         dv, dw = w, wn*wn*(vmax*u - v) - 2*zeta*wn*w
         v += dv*dt; w += dw*dt; x += v*dt; t += dt
         peak = max(peak, x)
+        if abs(x) > 1e3: return None              # loop diverged - > unstable
     return (peak-target)/target*100               # % overshoot
 
 for Kp in (0.05, 0.15, 0.4):
-    print(f"Kp={Kp}: overshoot {step(Kp):.0f}%,  tau={1/(vmax*Kp):.3f}s,  droop(3mm/s)={3/(vmax*Kp):.2f}mm")
+    os = step(Kp)
+    verdict = "unstable (diverges)" if os is None else f"overshoot {max(os,0):.0f}%"
+    print(f"Kp={Kp}: {verdict},  tau={1/(vmax*Kp):.3f}s,  droop(3mm/s)={3/(vmax*Kp):.2f}mm")
 ```
 
 **Your task:** confirm 0.15 is crisp while 0.4 rings hard. Then answer in a comment: both the settling time and the droop improve as you raise the gain — so what single thing stops you from raising it without limit?

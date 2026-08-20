@@ -1,0 +1,25 @@
+{
+  "title": "Fluid Power Systems Engineering: Mechanical and Hydraulic Systems",
+  "description": "A hands-on, open fluid power curriculum built around a single running machine \u2014 a precision hydraulic lift platform \u2014 spanning 11 modules and 52 lessons, from cylinders, pumps, and valves through electrohydraulic control, modeling and simulation, closed-loop control, and a live digital twin. Each lesson pairs physical intuition with a labelled diagram, an interactive demonstration, a worked example, and a short coding exercise.",
+  "upload_type": "lesson",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "creators": [
+    {
+      "name": "Koc, Ali Bulent",
+      "affiliation": "Clemson University",
+      "orcid": "0000-0003-3633-1699"
+    }
+  ],
+  "keywords": [
+    "fluid power",
+    "hydraulics",
+    "hydraulic control",
+    "electrohydraulics",
+    "mechatronics",
+    "digital twin",
+    "PID control",
+    "engineering education",
+    "open educational resources"
+  ]
+}

@@ -36,15 +36,15 @@ Mass on that spring gives a **natural frequency**:
 
 $$ \omega_n = \sqrt{\frac{k}{m}}, \qquad f_n = \frac{\omega_n}{2\pi} $$
 
-For the platform at mid-stroke, $k \approx 23.5\ \text{MN/m}$. Carrying the two-tonne load that is $f_n \approx 17\ \text{Hz}$; for the bare 3 kg tool it is far higher (~450 Hz), because a lighter mass on the same spring is quicker. That $f_n$ is the platform's speed limit for clean motion — and it falls if the oil softens.
+For the platform at mid-stroke, $k \approx 23.1\ \text{MN/m}$. Carrying the two-tonne load that is $f_n \approx 17\ \text{Hz}$; for the bare 3 kg tool it is far higher (~440 Hz), because a lighter mass on the same spring is quicker. That $f_n$ is the platform's speed limit for clean motion — and it falls if the oil softens.
 
 ## 4. Visual Explanation
 
 <figure markdown>
-  ![On the left, the cylinder redrawn as a mass on a spring: the moving mass m is the piston, rod and load; the spring is the trapped oil with stiffness k equals B_e times A squared over V, about 23.5 meganewtons per metre. On the right, a step response over a pick cycle: commanded a step, the piston accelerates, slightly overshoots, and rings before settling to the target within plus or minus one millimetre. Two curves compare a stiff clean-oil response, which settles quickly at about 17 hertz, with a softer aerated-oil response, which is slower and overshoots more at about 10 hertz — showing that keeping air out gives faster, cleaner motion.](assets/m04-l5-dynamics.svg){ width="760" }
+  ![On the left, the cylinder redrawn as a mass on a spring: the moving mass m is the piston, rod and load; the spring is the trapped oil with stiffness k equals B_e times A squared over V, about 23.1 meganewtons per metre. On the right, a step response over a pick cycle: commanded a step, the piston accelerates, slightly overshoots, and rings before settling to the target within plus or minus one millimetre. Two curves compare a stiff clean-oil response, which settles quickly at about 17 hertz, with a softer aerated-oil response, which is slower and overshoots more at about 10 hertz — showing that keeping air out gives faster, cleaner motion.](assets/m04-l5-dynamics.svg){ width="760" }
 </figure>
 
-On the left, the cylinder stripped to its essence: a **mass on a fluid spring**. The spring stiffness is the bulk modulus from Module 03 turned into $k = B_e A_b^2/V \approx 23.5\ \text{MN/m}$. On the right, what that system does when you command a move: it accelerates, may **overshoot**, and **rings** at its natural frequency before settling into the ±1 mm band. The two curves are the point — stiff clean oil (~17 Hz) settles quickly with little overshoot; softer aerated oil (~10 Hz) is slower and rings more. Keeping air out does not just hold the load; it makes every move faster and cleaner.
+On the left, the cylinder stripped to its essence: a **mass on a fluid spring**. The spring stiffness is the bulk modulus from Module 03 turned into $k = B_e A_b^2/V \approx 23.1\ \text{MN/m}$. On the right, what that system does when you command a move: it accelerates, may **overshoot**, and **rings** at its natural frequency before settling into the ±1 mm band. The two curves are the point — stiff clean oil (~17 Hz) settles quickly with little overshoot; softer aerated oil (~10 Hz) is slower and rings more. Keeping air out does not just hold the load; it makes every move faster and cleaner.
 
 ## 5. Engineering Example
 
@@ -56,7 +56,7 @@ A crane operator knows this in their hands. Lift a heavy load on a long, springy
 
 **Given** — the platform's cylinder as a mass–spring system at mid-stroke:
 
-- Fluid spring stiffness $k = B_e A_b^2/V \approx 23.5\ \text{MN/m}$ (with $B_e = 1.5\ \text{GPa}$, $A_b = 1963.5\ \text{mm}^2$, $V \approx 0.25\ \text{L}$)
+- Fluid spring stiffness $k = B_e A_b^2/V \approx 23.1\ \text{MN/m}$ (with $B_e = 1.5\ \text{GPa}$, $A_b = 1963.5\ \text{mm}^2$, $V \approx 0.25\ \text{L}$)
 - Moving mass: the two-tonne load, $m \approx 2000\ \text{kg}$
 
 **Find** — the natural frequency carrying the load, how it changes for the bare tool, and what entrained air does to it.
@@ -68,15 +68,15 @@ A crane operator knows this in their hands. Lift a heavy load on a long, springy
 
 **Solution**
 
-$$ f_n = \frac{1}{2\pi}\sqrt{\frac{k}{m}} = \frac{1}{2\pi}\sqrt{\frac{23.5\times10^6}{2000}} \approx 17\ \text{Hz} $$
+$$ f_n = \frac{1}{2\pi}\sqrt{\frac{k}{m}} = \frac{1}{2\pi}\sqrt{\frac{23.1\times10^6}{2000}} \approx 17\ \text{Hz} $$
 
-For the bare 3 kg tool the same spring gives $f_n = \tfrac{1}{2\pi}\sqrt{23.5\times10^6/3} \approx 450\ \text{Hz}$ — far quicker, because the mass is tiny. Now soften the oil with entrained air so $B_e$ falls to 0.5 GPa: $k$ falls by the same factor to ~7.8 MN/m, and the loaded natural frequency drops to
+For the bare 3 kg tool the same spring gives $f_n = \tfrac{1}{2\pi}\sqrt{23.1\times10^6/3} \approx 440\ \text{Hz}$ — far quicker, because the mass is tiny. Now soften the oil with entrained air so $B_e$ falls to 0.5 GPa: $k$ falls by the same factor to ~7.8 MN/m, and the loaded natural frequency drops to
 
 $$ f_n = \frac{1}{2\pi}\sqrt{\frac{7.8\times10^6}{2000}} \approx 10\ \text{Hz} $$
 
 **Result**
 
-$$ \boxed{f_n \approx 17\ \text{Hz loaded (clean oil)};\quad \approx 450\ \text{Hz for the bare tool};\quad \approx 10\ \text{Hz if air softens the oil}} $$
+$$ \boxed{f_n \approx 17\ \text{Hz loaded (clean oil)};\quad \approx 440\ \text{Hz for the bare tool};\quad \approx 10\ \text{Hz if air softens the oil}} $$
 
 **Engineering Interpretation** — The heavy load, on the oil spring, gives a natural frequency around 17 Hz: that is the platform's dynamic speed limit — command motion much faster and it lags and rings. The bare tool is far quicker, so *what you carry* sets the dynamics as much as the cylinder does. And the last number is the lesson of the whole fluid module coming home: let air drop the effective stiffness and the natural frequency falls to ~10 Hz, so the platform moves more slowly and settles less cleanly. Force, speed, friction, stopping, and now dynamics — the cylinder is fully characterised, and every one of them leans on the fluid you specified in Module 03.
 
@@ -100,7 +100,7 @@ def natural_freq(Be, m):
     return (1/(2*math.pi)) * math.sqrt(k / m)
 
 print(round(natural_freq(1.5e9, 2000), 1), "Hz  loaded, clean-ish oil")   # ~17
-print(round(natural_freq(1.5e9, 3), 1),    "Hz  bare 3 kg tool")          # ~450
+print(round(natural_freq(1.5e9, 3), 1),    "Hz  bare 3 kg tool")          # ~440
 print(round(natural_freq(0.5e9, 2000), 1), "Hz  loaded, aerated oil")     # ~10
 ```
 
@@ -134,8 +134,8 @@ The platform must make a 200 mm move and settle to ±1 mm as quickly as possible
 **The decision you can now make:** treat the cylinder as a mass on a fluid spring, find its natural frequency, and recognise what sets how quickly and cleanly it moves and settles.
 
 - The cylinder's motion obeys $m\ddot{x} = p\,A_b - F_f(\dot x) - F_\text{load}$ — the whole module's forces in one equation.
-- The trapped oil is a spring, $k = B_e A_b^2/V \approx 23.5\ \text{MN/m}$; mass on it gives a **natural frequency** $f_n = \tfrac{1}{2\pi}\sqrt{k/m}$.
-- Loaded (2 tonnes) that is **~17 Hz** — the platform's speed limit for clean motion; the bare 3 kg tool is far quicker (~450 Hz).
+- The trapped oil is a spring, $k = B_e A_b^2/V \approx 23.1\ \text{MN/m}$; mass on it gives a **natural frequency** $f_n = \tfrac{1}{2\pi}\sqrt{k/m}$.
+- Loaded (2 tonnes) that is **~17 Hz** — the platform's speed limit for clean motion; the bare 3 kg tool is far quicker (~440 Hz).
 - **Air softens the oil and lowers $f_n$** (~17 → ~10 Hz), slowing the response and growing overshoot — so keeping air out helps motion, not just holding.
 - **Module 04 is complete.** The cylinder is fully characterised — force, speed, usable force, a safe stop, and its dynamics. **Module 05 now sizes the power unit** that must feed all of it.
 

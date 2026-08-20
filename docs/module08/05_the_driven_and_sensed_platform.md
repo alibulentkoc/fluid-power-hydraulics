@@ -96,7 +96,8 @@ class Platform:                       # the plant: command in, (x, p) out
         return self.load*9.81/(A_cap*1e-6)/1e5
 
 p = Platform(2000)
-print(p.step(0.40, 2.0))              # -> (68.0 mm, ~100 bar)
+x, p_bar = p.step(0.40, 2.0)
+print(f"{x:.0f} mm, {p_bar:.0f} bar")   # -> 68 mm, ~100 bar
 
 # open loop cannot hold a target: nothing reads x to adjust u
 target = 300

@@ -52,6 +52,7 @@ extra_javascript:
 nav:
   - Home: index.md
   - The Course Machine: course-machine.md
+  - "Hydraulic Trainer ↗": https://alibulentkoc.github.io/hydraulic-trainer-platform/docs/releases/v1.4.0/hydraulic_trainer.html
   - "Module 01 — Introduction to Fluid Power":
       - Overview: module01/index.md
       - "01 · Why fluid power exists": module01/01_why_fluid_power_exists.md
